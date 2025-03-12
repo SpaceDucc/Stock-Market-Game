@@ -5,6 +5,8 @@ day = [1]
 hour = [1]
 moneygoal = 2000
 money = float(0)
+dummystock = [0]
+dummystockprice = [0]
 ownedstock1 = [0]
 price1change = ["="]
 ownedstock2 = [0]
@@ -1138,6 +1140,7 @@ def sell() :
         stockamountentry.draw(win1)
         
         if fakevar7 == 1 :
+            invalidnumbertext.undraw()
             invalidnumbertext.draw(win1)
 
         fakevar3 = 0
@@ -1170,32 +1173,64 @@ def sell() :
                     fakevar4 = 1
                     fakevar5 = 1
                     fakevar6 = 1
-        
+
         while fakevar4 == 1 :
             mathmoney = 0
             if whatstock == 1 :
-                sellmath(stock1price,ownedstock1)
+                if int(howmuch) > int(ownedstock1[0]) :
+                    invalidnumbertext.draw(win1)
+                    sellmath(dummystockprice,dummystock)
+                else :
+                    sellmath(stock1price,ownedstock1)
 
             elif whatstock == 2 :
-                sellmath(stock2price,ownedstock2)
+                if int(howmuch) > int(ownedstock2[0]) :
+                    invalidnumbertext.draw(win1)
+                    sellmath(dummystockprice,dummystock)
+                else :
+                    sellmath(stock2price,ownedstock2)
             
             elif whatstock == 3 :
-                sellmath(stock3price,ownedstock3)
+                if int(howmuch) > int(ownedstock3[0]) :
+                    invalidnumbertext.draw(win1)
+                    sellmath(dummystockprice,dummystock)
+                else :
+                    sellmath(stock3price,ownedstock3)
 
             elif whatstock == 4 :
-                sellmath(stock4price,ownedstock4)
+                if int(howmuch) > int(ownedstock4[0]) :
+                    invalidnumbertext.draw(win1)
+                    sellmath(dummystockprice,dummystock)
+                else :
+                    sellmath(stock4price,ownedstock4)
             
             elif whatstock == 5 :
-                sellmath(stock5price,ownedstock5)
+                if int(howmuch) > int(ownedstock5[0]) :
+                    invalidnumbertext.draw(win1)
+                    sellmath(dummystockprice,dummystock)
+                else :
+                    sellmath(stock5price,ownedstock5)
 
             elif whatstock == 6 :
-                sellmath(stock6price,ownedstock6)
+                if int(howmuch) > int(ownedstock6[0]) :
+                    invalidnumbertext.draw(win1)
+                    sellmath(dummystockprice,dummystock)
+                else :
+                    sellmath(stock6price,ownedstock6)
 
             elif whatstock == 7 :
-                sellmath(stock7price,ownedstock7)
+                if int(howmuch) > int(ownedstock7[0]) :
+                    invalidnumbertext.draw(win1)
+                    sellmath(dummystockprice,dummystock)
+                else :
+                    sellmath(stock7price,ownedstock7)
 
             elif whatstock == 8 :
-                sellmath(stock8price,ownedstock8)
+                if int(howmuch) > int(ownedstock8[0]) :
+                    invalidnumbertext.draw(win1)
+                    sellmath(dummystockprice,dummystock)
+                else :
+                    sellmath(stock8price,ownedstock8)
 
 def incrementtime() :
     global money
